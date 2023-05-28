@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.driveaware.MainScreenFragment"
+        android:label="MainScreenFragment"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_recordListFragment"
+            app:destination="@id/recordListFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_cameraFragment2"
+            app:destination="@id/cameraFragment2" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordListFragment"
+        android:name="com.example.driveaware.RecordListFragment"
+        android:label="RecordListFragment"
+        tools:layout="@layout/fragment_record_list" >
+        <action
+            android:id="@+id/action_recordListFragment_to_unsafeDetailFragment"
+            app:destination="@id/unsafeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unsafeDetailFragment"
+        android:name="com.example.driveaware.UnsafeDetailFragment"
+        android:label="UnsafeDetailFragment"
+        tools:layout="@layout/fragment_unsafe_detail"
+    />
+    <fragment
+        android:id="@+id/cameraFragment2"
+        android:name="com.example.driveaware.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment2_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.driveaware.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+</navigation>
